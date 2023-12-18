@@ -25,32 +25,26 @@ kotlin {
         }
     }
 
-    val ktorVersion = "2.3.1"
-    val sqlDelightVersion = "1.5.4"
-    val coroutinesVersion = "1.7.1"
-    val dateTimeVersion = "0.4.0"
-
-
 
     sourceSets {
         targetHierarchy.default()
 
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
-                implementation("io.ktor:ktor-client-core:$ktorVersion")
-                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
-                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-                implementation("com.squareup.sqldelight:runtime:$sqlDelightVersion")
-                implementation("org.jetbrains.kotlinx:kotlinx-datetime:$dateTimeVersion")
+                implementation(libs.kotlinx.coroutines.core)
+                implementation(libs.kotlinx.datetime)
+                implementation(libs.sqldelight.runtime)
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.content.negotiation)
+                implementation(libs.ktor.serialization.kotlinx.json)
             }
         }
 
 
         val androidMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-android:$ktorVersion")
-                implementation("com.squareup.sqldelight:android-driver:$sqlDelightVersion")
+                implementation(libs.sqldelight.android.driver)
+                implementation(libs.ktor.client.android)
             }
         }
 
@@ -59,8 +53,8 @@ kotlin {
         val iosSimulatorArm64Main by getting
         val iosMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-darwin:$ktorVersion")
-                implementation("com.squareup.sqldelight:native-driver:$sqlDelightVersion")
+                implementation(libs.sqldelight.native.driver)
+                implementation(libs.ktor.client.darwin)
             }
         }
 
