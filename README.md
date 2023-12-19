@@ -1,4 +1,5 @@
-forked from kotlin-hands-on/kmm-networking-and-data-storage
+forked from [kotlin-hands-on/kmm-networking-and-data-storage]
+
 
 Android App changed to compose instead of xml layout
 
@@ -9,3 +10,5 @@ Android App changed to compose instead of xml layout
 # Networking and data storage with Kotlin Multiplatform Mobile
 
 This repository is the code corresponding to the hands-on lab [Networking and data storage with Kotlin Multiplatform Mobile](https://play.kotlinlang.org/hands-on/Networking%20and%20Data%20Storage%20with%20Kotlin%20Multiplatfrom%20Mobile/01_Introduction).
+
+[kotlin-hands-on/kmm-networking-and-data-storage]: https://github.com/unchil/kmm-networking-and-data-storage "kmm-networking-and-data-storage"
